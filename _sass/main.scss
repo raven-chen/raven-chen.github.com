@@ -1,5 +1,5 @@
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 20px;
   margin: 0;
   font-weight: 400;
@@ -132,7 +132,7 @@ span[data-note] {
     box-sizing: border-box;
     &:hover,
     &:focus {
-      background: #f14e32;
+      background: #FFFFCC;
     }
     &:hover + .logo-prompt,
     &:focus + .logo-prompt {
