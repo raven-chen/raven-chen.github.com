@@ -29,11 +29,11 @@ open and assign array elements. like in ruby:  a,b,c = [1,2,3]
 > value.(Injector)
 Injector is an interface, this expression means if value implemented Injector's functions
 
+    type Context struct {
+      *qor.Context
+      *Searcher
+    }
 
-type Context struct {
-  *qor.Context
-  *Searcher
-}
 Mixin Searcher into Context. You can call Context.search(search is defined in Searcher) directly
 
 ## Pointer study
@@ -42,33 +42,33 @@ Mixin Searcher into Context. You can call Context.search(search is defined in Se
 
 ## Interface
 
-  type Shape interface {
-    area()
-  }
-
-  type Circle struct {
-  }
-
-  func (c *Circle) area() {
-    fmt.Println("I'm a circle")
-  }
-
-  type Rectangle struct {
-  }
-
-  func (c *Rectangle) area() {
-    fmt.Println("I'm a rectangle")
-  }
-
-In this example, Circle and Rectangle can be used as "Shape" together. like this
-
-  func totalArea(shapes ...Shape) {
-    for _, s := range shapes {
-      s.area()
+    type Shape interface {
+      area()
     }
-  }
 
-  totalArea(&c, &r)
+    type Circle struct {
+    }
+
+    func (c *Circle) area() {
+      fmt.Println("I'm a circle")
+    }
+
+    type Rectangle struct {
+    }
+
+    func (c *Rectangle) area() {
+      fmt.Println("I'm a rectangle")
+    }
+
+  In this example, Circle and Rectangle can be used as "Shape" together. like this
+
+    func totalArea(shapes ...Shape) {
+      for _, s := range shapes {
+        s.area()
+      }
+    }
+
+    totalArea(&c, &r)
 
 Kind of `duck typing` in Go...
 
