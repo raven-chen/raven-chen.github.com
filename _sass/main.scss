@@ -121,8 +121,8 @@ span[data-note] {
     color: #000;
     text-decoration: none;
     font-weight: 700;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     font-size: 1.5em;
     border-radius: 100%;
     display: inline-block;
@@ -139,10 +139,12 @@ span[data-note] {
       display: inline-block !important;
     }
     .gravatar {
-      margin-top: 5px;
+      margin: 5px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
+      width: 100px;
+      height: 100px;
     }
     @media (max-width : 480px) {&:hover + .logo-prompt,
       &:focus + .logo-prompt {
