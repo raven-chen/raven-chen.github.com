@@ -126,7 +126,7 @@ Below is a sample for testing a form. The source code is [here](https://github.c
 
 ## Setup CI
 
-We started with Drone because it is written in Go, but found it only provides a textarea in which to input commands, which we thought was very inconvenient. So we tried [semaphore CI](semaphoreci.com) and found it to perfectly fit our requirements:
+We started with Drone because it is written in Go, but found it only provides a textarea in which to input commands, which we thought was very inconvenient. So we tried [semaphore CI](semaphoreci.com) and found it perfectly fit our requirements:
 
 1. It is free for open source projects
 2. It provides a `Launch SSH` feature, so you can request a 1 hour permission to login to CI to debug your tests after your tests have finished. This is very helpful for CI debugging.
@@ -152,3 +152,5 @@ The database setup and package installation are in the Setup thread which is exe
 Like most CI systems, login with your GitHub/Bitbucket account and authorize Semaphore. Then select the project you want to test, select the Go version, type your commands, and you’re done! New commits and pull requests will trigger test builds automatically.
 
 Now you should see the green (or red) icons in your pull request page, so you can sleep better (or worse) at night :p
+
+
